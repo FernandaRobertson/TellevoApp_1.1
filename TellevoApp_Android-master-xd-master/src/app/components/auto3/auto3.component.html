@@ -1,0 +1,29 @@
+<ion-header>
+  <link rel="stylesheet" href="auto3.page.scss">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Jean Grasset</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="fondo">
+  <ion-card>
+    <ion-item>
+      <ion-label>Cantidad de Personas</ion-label>
+      <ion-select [(ngModel)]="num1" placeholder="Select One">
+        <ion-select-option value="0">0</ion-select-option>
+        <ion-select-option value="1">1</ion-select-option>
+        <ion-select-option  value="2">2</ion-select-option>
+        <ion-select-option value="3">3</ion-select-option>
+        <ion-select-option  value="4">4</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-button class="btn2" expand="small" color="medium" (click)="CalcPasaje()">Generar Precio</ion-button>
+    <ion-label >{{resultado}}$</ion-label>
+    <br>
+    <ion-button id="btnh" class="btn2" expand="small" *ngIf="Show"  color="medium" (click)="alerta()">Reservar asiento/s</ion-button>
+  </ion-card>
+</ion-content>
+

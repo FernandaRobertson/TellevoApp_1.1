@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="login.page.scss">
+<ion-header id="cabeza">
+  
+  <ion-toolbar id="cabeza">
+    <ion-title>Te llevo App</ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+  <ion-content id="cuerpo" class="fondo">
+    <br><br><br>
+    <h1 class="ion-text-center">Inicio de Sesión</h1>
+    <br>
+    <ion-card id="card">
+      <center><img src="https://i.pinimg.com/originals/0c/3b/3a/0c3b3adb1a7530892e55ef36d3be6cb8.png" position="center" width="50" height="50"></center>
+      <div class="row">
+      <ion-item >
+      <ion-label position="stacked"> Rut: </ion-label>
+      <ion-input  type="text" [(ngModel)]="tPkey" minlength=3 maxlenght=20 id="tPkey" clearInput></ion-input>
+      </ion-item>
+      <ion-item>
+      <ion-label position="stacked"> Contraseña: </ion-label>
+      <ion-input type="password" [(ngModel)]="tPass" minlength=3 maxlenght=20 id="Pass" clearInput></ion-input>
+    </ion-item>
+    </div>
+    <br>
+  </ion-card>
+  
+  <a id="linkk" [routerLink]="['/registro']">¿No tienes una cuenta todavía? Registrate aquí</a>
+  <ion-button class="btn1" expand="block" color="medium" (click)="ingresar()">Ingresar</ion-button>
+  
+  <ion-item-sliding *ngFor="let item of alumno">
+    <h1> {{item.nombre}}</h1>
+    <h1>{{item.rut}}</h1>
+    
+  
+  </ion-item-sliding>
+  </ion-content>
+  
+

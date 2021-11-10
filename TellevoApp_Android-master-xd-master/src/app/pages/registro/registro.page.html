@@ -1,0 +1,49 @@
+<ion-header>
+  <link rel="stylesheet" href="registro.page.scss">
+  <ion-toolbar>
+    <ion-title>Regístrate</ion-title>
+    
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="fondo2">
+  <br>
+  <br>
+  <br> 
+  <h1 class="ion-text-center">Registro de Usuario</h1>
+  <br>
+
+  <ion-card id="card">
+    <ion-item>
+      <ion-label position="stacked">Nombre: </ion-label>
+      <ion-input  type="text" [(ngModel)]="tUser" minlength=3 maxlenght=20 id="User" clearInput></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Apellido: </ion-label>
+      <ion-input  type="text" [(ngModel)]="tUser2" minlength=3 maxlenght=20 id="User2" clearInput ></ion-input>
+    </ion-item>
+    <ion-item>
+    <ion-label position="stacked">Rut: </ion-label>
+      <ion-input  type="text" [(ngModel)]="tPkey" length=10 id="tPkey" clearInput placeholder="Sin puntos y con guión"></ion-input>
+      </ion-item>
+      <ion-item>
+      <ion-label  position="stacked">Contraseña: </ion-label>
+      <ion-input type="password" [(ngModel)]="tPass" minlength=3 maxlenght=20 id="Pass" clearInput></ion-input>
+    </ion-item>
+      <ion-item>
+      <ion-label position="stacked">Correo Electronico: </ion-label>
+      <ion-input  type="text" [(ngModel)]="tMail" minlength=3 maxlenght=20 id="User" clearInput></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Fecha Nacimiento: </ion-label>
+      <ion-input  type="date" [(ngModel)]="tDate" minlength=3 maxlenght=20 id="User" clearInput placeholder="Opcional"></ion-input>
+    </ion-item>
+    <br>
+  </ion-card>
+  <ion-button expand="block" (click)="guardar();"color="dark">Registrarme</ion-button>
+  <ion-progress-bar></ion-progress-bar>
+</ion-content>
+
